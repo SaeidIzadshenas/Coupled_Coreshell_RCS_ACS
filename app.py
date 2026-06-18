@@ -378,13 +378,13 @@ def plot_cross_sections(df: pd.DataFrame):
 
     ax.plot(df["lda0"], df["C_scatt_total"], linewidth=2, label="C_scatt_total")
     ax.plot(df["lda0"], df["C_absor_total"], linewidth=2, label="C_absor_total")
-    ax.plot(df["lda0"], df["C_ext_total_model"], linewidth=2, label="C_ext_total model")
-    ax.plot(df["lda0"], df["C_ext_total_sum"], "--", linewidth=2, label="C_scatt + C_absor")
+    # ax.plot(df["lda0"], df["C_ext_total_model"], linewidth=2, label="C_ext_total model")
+    # ax.plot(df["lda0"], df["C_ext_total_sum"], "--", linewidth=2, label="C_scatt + C_absor")
 
     ax.set_xlabel("Wavelength [nm]")
     ax.set_ylabel("Cross section")
     ax.set_title("Predicted cross-section spectra")
-    ax.set_yscale("log")
+    ax.set_yscale("linear")
     ax.grid(True, which="both", alpha=0.3)
     ax.legend()
 
